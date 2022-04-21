@@ -1,16 +1,11 @@
 ﻿// Принимает на вход 3-значное число и выводит вторую цифру этого числа
-
-//int num = new Random().Next(100, 1000);
-//Console.WriteLine(num);
-//num = num / 10;
-//num = num % 10;
-//Console.WriteLine(num);
+//int num = new Random().Next(100, 1000); можно еще так - тогда не нужна проверка на трехзначность.
 
 int num = 918;
-if (num > 100 && num < 1000)
+if (num >= 100 && num < 1000)
 {
-    num = num / 10;
-    num = num % 10;
+    num = num / 10; // оставляем неполное частное от деления на 10, т.е. убираем единицы
+    num = num % 10; // оставляем остаток от деления на 10, т.е. нужную нам цифру
     Console.WriteLine(num);
 }
 else
